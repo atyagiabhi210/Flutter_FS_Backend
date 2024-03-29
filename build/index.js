@@ -16,7 +16,7 @@ const routes_1 = __importDefault(require("./routes/routes"));
 dotenv_1.default.config();
 // here we are initializing the express server
 const app = (0, express_1.default)();
-//here we create our server and pass our Express app to it  
+//here we create our server and pass our Express app to it
 const server = http_1.default.createServer(app);
 //Express Configuration
 // here we are using cors basically we use cors so that any client can make a request to our server
@@ -28,7 +28,7 @@ app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.set("PORT", 3000);
 // here we set our base url we can also modify it to our domain name
 app.set("BASE_URL", "localhost");
-console.log('Hello, world!');
+console.log("Hello, world!");
 //Routes
 // Here we are using our router which we have defined in our routes folder mainly setting up our router
 app.use("/api/V1", routes_1.default);
@@ -38,7 +38,9 @@ if (!mongoURI) {
     console.error("Mongo URI is not defined");
     process.exit(1);
 }
-mongoose_1.default.connect(mongoURI, {}).then(() => {
+mongoose_1.default
+    .connect(mongoURI, {})
+    .then(() => {
     console.log("MongoDB connected");
 })
     .catch((error) => {
@@ -52,7 +54,7 @@ try {
     const baseUrl = app.get("BASE_URL");
     server.listen(port, () => {
         console.log(`Server is running on http://${baseUrl}:${port} `);
-        console.log('balle');
+        console.log("balle");
     });
 }
 catch (_a) {
