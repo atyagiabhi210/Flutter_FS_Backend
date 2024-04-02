@@ -12,7 +12,7 @@ export const getUserRepo = async (
       uid: userId,
     });
     console.log(user);
-    return user;
+    return user;``
   } catch (err) {
     console.error(err);
     return null;
