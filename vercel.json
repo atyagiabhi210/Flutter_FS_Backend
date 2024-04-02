@@ -1,10 +1,10 @@
 {
     "version": 2,
     "builds": [
-      { "src": "/build/*.js", "use": "@vercel/node" }
+      { "src": "/build", "use": "@vercel/node" }
     ],
     "routes": [
-        { "src": "/build/.*", "dest": "/" }
+        { "src": "/routes", "dest": "/" }
     ],
     "regions": [
         "sfo1"
