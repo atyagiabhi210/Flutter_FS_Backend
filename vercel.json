@@ -8,5 +8,6 @@
     ],
     "regions": [
         "iad1"
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
